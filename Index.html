@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SkillUp — Learn Something New</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- SKILLUP LOADING / REFRESH SCREEN -->
+    <div id="pageLoader">
+        <div class="loader-logo">
+            <div class="loader-s">S</div>
+            <div class="loader-text">Skill<span>Up</span></div>
+        </div>
+
+        <div class="loader-line">
+            <div class="loader-progress"></div>
+        </div>
+
+        <p>Loading your skills...</p>
+    </div>
+
+
+    <!-- Cursor Trail -->
+    <div id="cursor-trail"></div>
+
+
+    <!-- Navigation -->
+    <nav class="navbar">
+
+        <div class="logo">
+            <span class="logo-icon">S</span>
+            <span>Skill<span class="logo-grey">Up</span></span>
+        </div>
+
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#skills">Skills</a>
+            <a href="#quote">Quote</a>
+            <a href="#contact">Contact</a>
+        </div>
+
+        <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+    </nav>
+
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#home" onclick="toggleMenu()">Home</a>
+        <a href="#skills" onclick="toggleMenu()">Skills</a>
+        <a href="#quote" onclick="toggleMenu()">Quote</a>
+        <a href="#contact" onclick="toggleMenu()">Contact</a>
+    </div>
+
+
+    <!-- HOME -->
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <div class="hero-badge">
+                <span></span>
+                Learn. Practice. Improve.
+            </div>
+
+            <h1>
+                Learn Skills.<br>
+                <span>Build Yourself.</span>
+            </h1>
+
+            <p>
+                Learn useful skills, understand concepts,
+                practice questions and improve every day.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#skills" class="primary-btn">
+                    Start Learning
+                </a>
+
+                <a href="#quote" class="secondary-btn">
+                    Quote of the Day
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- HOME SIDE -->
+        <div class="hero-side">
+
+            <!-- CLOCK -->
+            <div class="clock-card">
+
+                <div class="clock-top">
+                    <span class="clock-dot"></span>
+                    CURRENT TIME
+                </div>
+
+                <div id="indiaTime" class="india-time">
+                    00:00:00
+                </div>
+
+                <div id="indiaDate" class="india-date">
+                    Loading...
+                </div>
+
+            </div>
+
+
+            <div class="hero-shape">
+
+                <div class="floating-card card-one">
+                    MATHS
+                </div>
+
+                <div class="floating-card card-two">
+                    ENGLISH
+                </div>
+
+                <div class="floating-card card-three">
+                    CHESS
+                </div>
+
+                <div class="floating-card card-four">
+                    CODING
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- SKILLS -->
+    <section class="skills-section" id="skills">
+
+        <div class="section-heading">
+
+            <span class="small-title">
+                EXPLORE
+            </span>
+
+            <h2>
+                Choose a <span>Skill</span>
+            </h2>
+
+            <p>
+                Pick something you want to learn and start improving.
+            </p>
+
+        </div>
+
+
+        <div class="skills-grid">
+
+
+            <!-- ================= MATHS ================= -->
+
+            <div class="skill-card reveal">
+
+                <div class="skill-icon">
+                    ∑
+                </div>
+
+                <h3>Mathematics</h3>
+
+                <p>
+                    Learn useful mathematical concepts
+                    with simple examples.
+                </p>
+
+                <div class="lesson-list">
+
+                    <button onclick="openLesson('average')">
+                        Average
+                    </button>
+
+                    <button onclick="openLesson('percentage')">
+                        Percentage
+                    </button>
+
+                    <button onclick="openLesson('cp')">
+                        CP & SP
+                    </button>
+
+                    <button onclick="openLesson('profitloss')">
+                        Profit & Loss
+                    </button>
+
+                    <button onclick="openLesson('simpleinterest')">
+                        Simple Interest
+                    </button>
+
+                    <button onclick="openLesson('compoundinterest')">
+                        Compound Interest
+                    </button>
+
+                    <button onclick="openLesson('tables')">
+                        Tables 2–20
+                    </button>
+
+                    <button onclick="openQuiz()">
+                        Random Quiz
+                    </button>
+
+                    <button onclick="comingSoon()">
+                        Algebra
+                    </button>
+
+                    <button onclick="comingSoon()">
+                        Number System
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= ENGLISH ================= -->
+
+            <div class="skill-card reveal">
+
+                <div class="skill-icon">
+                    A
+                </div>
+
+                <h3>English</h3>
+
+                <p>
+                    Learn grammar rules, identities and
+                    sentence structures.
+                </p>
+
+                <div class="lesson-list">
+
+                    <button onclick="openLesson('tenses')">
+                        All Tenses
+                    </button>
+
+                    <button onclick="openLesson('passive')">
+                        Passive Voice
+                    </button>
+
+                    <button onclick="openLesson('noun')">
+                        Noun
+                    </button>
+
+                    <button onclick="openLesson('pronoun')">
+                        Pronoun
+                    </button>
+
+                    <button onclick="openLesson('adjective')">
+                        Adjective
+                    </button>
+
+                    <button onclick="openLesson('conjunction')">
+                        Conjunction
+                    </button>
+
+                    <button onclick="comingSoon()">
+                        More Grammar
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= GK ================= -->
+
+            <div class="skill-card reveal">
+
+                <div class="skill-icon">
+                    ?
+                </div>
+
+                <h3>General Knowledge</h3>
+
+                <p>
+                    Explore interesting questions and facts
+                    from around the world.
+                </p>
+
+                <div class="coming-box"
+                     onclick="comingSoon()">
+
+                    <span>🚧</span>
+
+                    <strong>Coming Soon</strong>
+
+                    <small>
+                        GK lessons are being prepared.
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= CHESS ================= -->
+
+            <div class="skill-card reveal">
+
+                <div class="skill-icon">
+                    ♟
+                </div>
+
+                <h3>Chess</h3>
+
+                <p>
+                    Learn strong openings and improve
+                    your chess understanding.
+                </p>
+
+                <div class="lesson-list">
+
+                    <button onclick="openLesson('italian')">
+                        Italian Game
+                    </button>
+
+                    <button onclick="openLesson('sicilian')">
+                        Sicilian Defense
+                    </button>
+
+                    <button onclick="openLesson('queensgambit')">
+                        Queen's Gambit
+                    </button>
+
+                    <button onclick="openLesson('ruylopez')">
+                        Ruy Lopez
+                    </button>
+
+                    <button onclick="comingSoon()">
+                        More Openings
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= CODING ================= -->
+
+            <div class="skill-card reveal">
+
+                <div class="skill-icon">
+                    &lt;/&gt;
+                </div>
+
+                <h3>Coding</h3>
+
+                <p>
+                    Start coding with simple examples
+                    and understand the basics.
+                </p>
+
+                <div class="lesson-list">
+
+                    <button onclick="openLesson('html')">
+                        Basic HTML
+                    </button>
+
+                    <button onclick="openLesson('css')">
+                        Basic CSS
+                    </button>
+
+                    <button onclick="openLesson('javascript')">
+                        JavaScript
+                    </button>
+
+                    <button onclick="openLesson('python')">
+                        Python
+                    </button>
+
+                    <button onclick="comingSoon()">
+                        More Coding
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= VIDEO EDITING ================= -->
+
+            <div class="skill-card reveal">
+
+                <div class="skill-icon">
+                    ✦
+                </div>
+
+                <h3>Video Editing</h3>
+
+                <p>
+                    Professional editing lessons are
+                    currently being prepared.
+                </p>
+
+                <div class="coming-box"
+                     onclick="comingSoon()">
+
+                    <span>🚧</span>
+
+                    <strong>Coming Soon</strong>
+
+                    <small>
+                        This skill is currently coming soon.
+                    </small>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="more-skills">
+            <span>+</span>
+            More skills coming soon
+        </div>
+
+    </section>
+
+
+    <!-- QUOTE -->
+    <section class="quote-section" id="quote">
+
+        <div class="quote-box">
+
+            <div class="quote-icon">
+                “
+            </div>
+
+            <span>
+                QUOTE OF THE DAY
+            </span>
+
+            <h2 id="dailyQuote">
+                Loading...
+            </h2>
+
+            <p id="quoteAuthor"></p>
+
+            <div class="quote-line"></div>
+
+            <small>
+                Come back tomorrow for a new quote.
+            </small>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTACT -->
+    <section class="contact-section" id="contact">
+
+        <div class="contact-box">
+
+            <div class="contact-logo">
+                🔧
+            </div>
+
+            <span>
+                HAVE A QUESTION?
+            </span>
+
+            <h2>
+                Let's Connect.
+            </h2>
+
+            <p>
+                Want to suggest a new skill or have a question?
+                Feel free to reach out.
+            </p>
+
+            <a href="mailto:tanushka@example.com"
+               class="email-btn">
+                Email Me
+            </a>
+
+            <div class="social">
+                Instagram:
+                <strong>@example_1</strong>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <div class="footer-logo">
+
+            <span class="logo-icon">
+                S
+            </span>
+
+            SkillUp
+
+        </div>
+
+        <p>
+            Keep learning. Keep growing.
+        </p>
+
+        <div class="created">
+
+            <span class="wrench">
+                🔧
+            </span>
+
+            Created by
+            <strong>
+                Tanushka Nayak
+            </strong>
+
+        </div>
+
+        <p class="copyright">
+            © 2026 SkillUp. All rights reserved.
+        </p>
+
+    </footer>
+
+
+    <!-- ================= LESSON MODAL ================= -->
+
+    <div class="modal" id="lessonModal">
+
+        <div class="modal-content">
+
+            <button class="close-btn"
+                    onclick="closeLesson()">
+                ×
+            </button>
+
+            <div class="modal-icon"
+                 id="modalIcon">
+                ∑
+            </div>
+
+            <h2 id="modalTitle">
+                Lesson
+            </h2>
+
+            <div id="modalBody"></div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= COMING SOON ================= -->
+
+    <div class="modal" id="comingModal">
+
+        <div class="modal-content coming-content">
+
+            <button class="close-btn"
+                    onclick="closeComing()">
+                ×
+            </button>
+
+            <div class="coming-big-icon">
+                🚧
+            </div>
+
+            <h2>
+                Coming Soon
+            </h2>
+
+            <p>
+                This skill is currently being prepared.
+            </p>
+
+            <span>
+                More lessons are coming soon.
+            </span>
+
+            <button class="modal-ok"
+                    onclick="closeComing()">
+                Got it
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= QUIZ ================= -->
+
+    <div class="modal" id="quizModal">
+
+        <div class="modal-content quiz-content">
+
+            <button class="close-btn"
+                    onclick="closeQuiz()">
+                ×
+            </button>
+
+            <div class="quiz-top">
+
+                <span>
+                    MATHS QUIZ
+                </span>
+
+                <strong id="quizCounter">
+                    1 / 10
+                </strong>
+
+            </div>
+
+            <h2 id="quizQuestion">
+                Question
+            </h2>
+
+            <div id="quizOptions"
+                 class="quiz-options">
+            </div>
+
+            <div id="quizFeedback"
+                 class="quiz-feedback">
+            </div>
+
+            <button id="nextQuestion"
+                    class="next-question"
+                    onclick="nextQuizQuestion()">
+                Next Question
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= PERFECT SCORE ================= -->
+
+    <div id="celebration">
+
+        <div class="sparkles"></div>
+
+        <div class="celebration-box">
+
+            <div class="trophy">
+                🏆
+            </div>
+
+            <div class="perfect-text">
+                PERFECT SCORE!
+            </div>
+
+            <h2>
+                Congratulations!
+            </h2>
+
+            <p>
+                You got 10/10.
+            </p>
+
+            <span>
+                Excellent work. Keep learning!
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
